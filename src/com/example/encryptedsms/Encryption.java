@@ -9,11 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class Encryption extends Activity {
-//	Button buttonSend;
-//	EditText tN = (EditText)findViewById(R.id.telNum);
-//	EditText sms = (EditText)findViewById(R.id.textMessage);
-//	String smsContent = sms.getText().toString();
-//	String telNumber = tN.getText().toString();
+	Button buttonSend;
+	EditText tN = (EditText)findViewById(R.id.telNum);
+	EditText sms = (EditText)findViewById(R.id.textMessage);
+	String smsContent = sms.getText().toString();
+	String telNumber = tN.getText().toString();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
