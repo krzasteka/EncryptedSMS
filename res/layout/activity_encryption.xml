@@ -17,7 +17,9 @@
         android:layout_below="@+id/textMessage"
         android:layout_marginTop="37dp"
         android:ems="10"
-        android:hint="Encryption Key" />
+        android:hint="Encryption Key" 
+        android:inputType = "text"
+        />
 
     <EditText
         android:id="@+id/textMessage"
@@ -28,7 +30,9 @@
         android:layout_marginTop="25dp"
         android:ems="10"
         android:hint="Enter text message to be encrypted here."
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:inputType = "text"
+        />
 
     <EditText
         android:id="@+id/telNum"
@@ -53,5 +57,16 @@
         android:layout_below="@+id/encryptKey"
         android:layout_marginTop="25dp"
         android:text="Send" />
+
+    <TextView
+        android:id="@+id/previewText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/telNum"
+        android:layout_alignRight="@+id/telNum"
+        android:layout_below="@+id/sendEncrypt"
+        android:layout_marginTop="29dp"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

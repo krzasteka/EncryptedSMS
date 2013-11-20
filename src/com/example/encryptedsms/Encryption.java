@@ -7,41 +7,52 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class Encryption extends Activity {
-	Button buttonSend;
-<<<<<<< HEAD
-//	EditText tN = (EditText)findViewById(R.id.telNum);
-//	EditText sms = (EditText)findViewById(R.id.textMessage);
-//	String smsContent = sms.getText().toString();
-//	String telNumber = tN.getText().toString();
-=======
-	EditText tN = (EditText)findViewById(R.id.telNum);
-	EditText sms = (EditText)findViewById(R.id.textMessage);
-	String smsContent = sms.getText().toString();
-	String telNumber = tN.getText().toString();
->>>>>>> 2f085fb285acee74032391c9290f59c6e90e0664
+
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_encryption);
 		
+		final EditText sms = (EditText)findViewById(R.id.textMessage);
+		
+		final EditText tN = (EditText)findViewById(R.id.telNum);
+		
+		final TextView previewText = (TextView)findViewById(R.id.previewText);
+		
+		final Button button = (Button) findViewById(R.id.sendEncrypt);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+            	final String smsContent = sms.getText().toString();
+            	final String telNumber = tN.getText().toString();
+            	previewText.setText(smsContent);
+            	sendSMS(telNumber, smsContent);
+            }
+            
+            
+     	   private void sendSMS(String phoneNumber, String message)
+    	   {
+    	       SmsManager sms = SmsManager.getDefault();
+    	       sms.sendTextMessage(phoneNumber, null, message, null, null);
+    	   }
+        });
+        
 //		Button btnSendSMS = (Button) findViewById(R.id.sendEncrypt);
 //	      btnSendSMS.setOnClickListener(new View.OnClickListener()
 //	      {
 //	         public void onClick(View v)
 //	         {
-////	             sendSMS(telNumber, smsContent);
+////	             
 //	          }
 //	      });
 //	   }
 	  //---sends an SMS message to another device---
 //
-//	   private void sendSMS(String phoneNumber, String message)
-//	   {
-//	       SmsManager sms = SmsManager.getDefault();
-//	       sms.sendTextMessage(phoneNumber, null, message, null, null);
+
 	    }
 
 	@Override
