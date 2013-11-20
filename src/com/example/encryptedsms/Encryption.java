@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class Encryption extends Activity {
-//	Button buttonSend;
+	Button buttonSend;
 //	EditText tN = (EditText)findViewById(R.id.telNum);
 //	EditText sms = (EditText)findViewById(R.id.textMessage);
 //	String smsContent = sms.getText().toString();
