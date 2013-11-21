@@ -1,5 +1,6 @@
 package com.example.encryptedsms;
 
+import android.R.string;
 import android.os.Bundle;
 import android.app.Activity;
 import android.telephony.SmsManager;
@@ -8,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import java.security.*;
+import javax.crypto.*;
 
 public class Encryption extends Activity {
 
@@ -18,9 +21,7 @@ public class Encryption extends Activity {
 		setContentView(R.layout.activity_encryption);
 		
 		final EditText sms = (EditText)findViewById(R.id.textMessage);
-		
-		final EditText tN = (EditText)findViewById(R.id.telNum);
-		
+		final EditText tN = (EditText)findViewById(R.id.telNum);		
 		final TextView previewText = (TextView)findViewById(R.id.previewText);
 		
 		final Button button = (Button) findViewById(R.id.sendEncrypt);
@@ -33,6 +34,9 @@ public class Encryption extends Activity {
             	sendSMS(telNumber, smsContent);
             }
             
+            private string encryptSMS(String tbe, String key){
+               
+            }
             
      	   private void sendSMS(String phoneNumber, String message)
     	   {
