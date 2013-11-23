@@ -10,6 +10,7 @@
     
     <uses-permission android:name="android.permission.SEND_SMS" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <uses-permission id="android.permission.RECEIVE_SMS" />
 <application>
     <receiver class="SMSApp">
@@ -26,11 +27,16 @@
     
     <application
 =======
+=======
+>>>>>>> 6676ad2a2c64ebbac9e6a12d5034e4255a8225e5
     <uses-permission android:name="android.permission.WRITE_SMS" /> 
     <uses-permission android:name="android.permission.READ_SMS" /> 
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     
         <application
+<<<<<<< HEAD
+>>>>>>> 6676ad2a2c64ebbac9e6a12d5034e4255a8225e5
+=======
 >>>>>>> 6676ad2a2c64ebbac9e6a12d5034e4255a8225e5
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
