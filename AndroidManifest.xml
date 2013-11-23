@@ -9,7 +9,20 @@
         android:targetSdkVersion="18" />
     
     <uses-permission android:name="android.permission.SEND_SMS" />
-
+    <uses-permission id="android.permission.RECEIVE_SMS" />
+<application>
+    <receiver class="SMSApp">
+        <intent-filter>
+            <action android:value="android.provider.Telephony.SMS_RECEIVED" />
+        </intent-filter>
+    </receiver>
+</application>
+ 
+    <receiver android:name="com.encima.smsreceiver.MessageReceiver" android:exported="true">
+    <intent-filter android:priority="999">
+        <action android:name="android.provider.Telephony.SMS_RECEIVED"></action>
+    </intent-filter>
+    
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
