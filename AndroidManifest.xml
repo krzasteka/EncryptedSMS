@@ -9,6 +9,7 @@
         android:targetSdkVersion="18" />
     
     <uses-permission android:name="android.permission.SEND_SMS" />
+<<<<<<< HEAD
     <uses-permission id="android.permission.RECEIVE_SMS" />
 <application>
     <receiver class="SMSApp">
@@ -24,10 +25,18 @@
     </intent-filter>
     
     <application
+=======
+    <uses-permission android:name="android.permission.WRITE_SMS" /> 
+    <uses-permission android:name="android.permission.READ_SMS" /> 
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    
+        <application
+>>>>>>> 6676ad2a2c64ebbac9e6a12d5034e4255a8225e5
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
         <activity
             android:name="com.example.encryptedsms.MainActivity"
             android:label="@string/app_name" >
@@ -37,10 +46,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <receiver android:name=".IncomingSms" android:exported="true" > 
+  			<intent-filter android:priority="1000"> 
+    			<action android:name="android.provider.Telephony.SMS_RECEIVED" />
+  			</intent-filter> 
+		</receiver>
+		
         <activity
             android:name="com.example.encryptedsms.Encryption"
             android:label="@string/title_activity_encryption" >
         </activity>
+        
     </application>
 
 </manifest>
